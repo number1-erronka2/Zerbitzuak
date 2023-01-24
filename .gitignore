@@ -22,9 +22,6 @@
 # virtual machine crash logs
 hs_err_pid*
 replay_pid*
-/Socket/nbproject/private/
-/Socket/build/
-/Socket/dist/
 /Socket_Erabiltzailea/nbproject/private/
 /Socket_Erabiltzailea/build/
 /Socket_Erabiltzailea/dist/
