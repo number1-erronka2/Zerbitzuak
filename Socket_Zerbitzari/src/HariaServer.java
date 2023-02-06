@@ -17,6 +17,7 @@ public class HariaServer extends Thread {
         this.fSarrera = ois;
     }
 
+    @Override
     public void run() {
         try {
             insertData();
@@ -25,6 +26,7 @@ public class HariaServer extends Thread {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private static void insertData() {
         String langilea;
         Float puntuazioa;
@@ -44,7 +46,7 @@ public class HariaServer extends Thread {
             System.out.println("\t" + socket + " bukatu du.");
             fSarrera.close();
             socket.close();
-        } catch (Exception ex) {
+        } catch (IOException | ClassNotFoundException ex) {
             Logger.getLogger(HariaServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
