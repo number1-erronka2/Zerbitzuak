@@ -13,7 +13,7 @@ public class Erabiltzailea {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        try ( Socket socket = new Socket("localhost", 6006)) {
+        try ( Socket socket = new Socket("192.168.65.123", 6006)) {
             // Partiden lista sortu
             partidak = new ArrayList<>();
             connection = new SQLiteConnection();
