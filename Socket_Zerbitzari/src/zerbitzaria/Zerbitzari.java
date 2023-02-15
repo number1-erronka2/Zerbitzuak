@@ -1,4 +1,4 @@
-
+package zerbitzaria;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -18,13 +18,16 @@ public class Zerbitzari {
             System.out.println(erabiltzailea + " konektatua.");
 
             // input-a hartu socket-etik
+	    try{
             inputStream = erabiltzailea.getInputStream();
             objectInputStream = new ObjectInputStream(inputStream);
 
             HariaServer haria = new HariaServer(erabiltzailea, objectInputStream);
             haria.start();
-
+		}
+		catch(Exception e){
+			System.out.println(e);
+        }
         }
     }
-
 }

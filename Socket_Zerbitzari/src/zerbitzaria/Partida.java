@@ -1,3 +1,4 @@
+package zerbitzaria;
 
 import java.io.Serializable;
 import java.util.Date;
