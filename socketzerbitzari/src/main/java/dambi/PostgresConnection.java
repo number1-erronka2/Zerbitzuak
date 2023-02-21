@@ -29,7 +29,7 @@ public class PostgresConnection {
 
     public void insertPartida(String langilea, Float puntuazioa, Date data) throws ClassNotFoundException {
         
-         String sql = "INSERT INTO partida (puntuazioa, erabiltzailea, data) VALUES (?,?,?)";
+        String sql = "INSERT INTO partida (puntuazioa, erabiltzailea, data) VALUES (?,?,?)";
         java.sql.Timestamp timestamp = new java.sql.Timestamp(data.getTime());
         try {
             Connection conn = this.connect();
@@ -43,7 +43,7 @@ public class PostgresConnection {
                 pstmt.executeQuery();
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
     }
 }
