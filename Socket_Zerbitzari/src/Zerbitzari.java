@@ -18,12 +18,16 @@ public class Zerbitzari {
             System.out.println(erabiltzailea + " konektatua.");
 
             // input-a hartu socket-etik
-            inputStream = erabiltzailea.getInputStream();
-            objectInputStream = new ObjectInputStream(inputStream);
+            try{
+                inputStream = erabiltzailea.getInputStream();
+                objectInputStream = new ObjectInputStream(inputStream);
 
-            HariaServer haria = new HariaServer(erabiltzailea, objectInputStream);
-            haria.start();
-
+                HariaServer haria = new HariaServer(erabiltzailea, objectInputStream);
+                haria.start();
+            } catch(Exception e){
+                System.out.println(e);
+            }
+            
         }
     }
 

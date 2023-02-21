@@ -1,19 +1,13 @@
-
+package dambi;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Date;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author lomana.markel
- */
 public class SQLiteConnection {
-    
     public List<Partida> partidak = new ArrayList<>();
 
     private Connection connect() throws ClassNotFoundException  {
@@ -48,5 +42,4 @@ public class SQLiteConnection {
         }
         return partidak;
     }
-    
 }

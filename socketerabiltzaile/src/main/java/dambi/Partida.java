@@ -1,9 +1,10 @@
+package dambi;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class Partida implements Serializable{
-    
+
+public class Partida implements Serializable {
     public String langilea;
     public float puntuazioa;
     public Date data;
@@ -46,5 +47,4 @@ public class Partida implements Serializable{
     public String toString() {
         return "Partida{" + "langilea=" + langilea + ", puntuazioa=" + puntuazioa + ", data=" + data + '}';
     }
-
 }

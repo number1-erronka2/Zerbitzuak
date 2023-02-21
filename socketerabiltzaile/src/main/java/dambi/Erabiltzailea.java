@@ -1,3 +1,4 @@
+package dambi;
 
 import java.io.*;
 import java.net.Socket;
@@ -5,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Erabiltzailea {
-
     private static List<Partida> partidak;
     private static SQLiteConnection connection;
     private static OutputStream outputStream;
