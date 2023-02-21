@@ -1,8 +1,4 @@
-<<<<<<< HEAD:socketzerbitzari/src/main/java/dambi/HariaServer.java
 package dambi;
-=======
-package zerbitzaria;
->>>>>>> ed4792831fc3caf047a1e83e46ea16079e8f17be:socketzerbitzari/src/main/java/dambi/zerbitzaria/HariaServer.java
 
 import java.io.*;
 import java.net.*;

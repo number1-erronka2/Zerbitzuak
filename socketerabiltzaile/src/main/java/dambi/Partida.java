@@ -1,8 +1,4 @@
-<<<<<<< HEAD:socketerabiltzaile/src/main/java/dambi/Partida.java
 package dambi;
-=======
-package zerbitzaria;
->>>>>>> ed4792831fc3caf047a1e83e46ea16079e8f17be:socketzerbitzari/src/main/java/dambi/zerbitzaria/Partida.java
 
 import java.io.Serializable;
 import java.util.Date;

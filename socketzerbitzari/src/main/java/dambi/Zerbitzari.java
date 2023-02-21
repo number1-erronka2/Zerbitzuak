@@ -1,13 +1,8 @@
-<<<<<<< HEAD:socketzerbitzari/src/main/java/dambi/Zerbitzari.java
 package dambi;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-=======
-package zerbitzaria;
-import java.io.*;
->>>>>>> ed4792831fc3caf047a1e83e46ea16079e8f17be:socketzerbitzari/src/main/java/dambi/zerbitzaria/Zerbitzari.java
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -24,7 +19,6 @@ public class Zerbitzari {
             System.out.println(erabiltzailea + " konektatua.");
     
             // input-a hartu socket-etik
-<<<<<<< HEAD:socketzerbitzari/src/main/java/dambi/Zerbitzari.java
             try{
                 inputStream = erabiltzailea.getInputStream();
                 objectInputStream = new ObjectInputStream(inputStream);
@@ -37,19 +31,4 @@ public class Zerbitzari {
             
         }
     }
-   
-=======
-	    try{
-            inputStream = erabiltzailea.getInputStream();
-            objectInputStream = new ObjectInputStream(inputStream);
-
-            HariaServer haria = new HariaServer(erabiltzailea, objectInputStream);
-            haria.start();
-		}
-		catch(Exception e){
-			System.out.println(e);
-        }
-        }
-    }
->>>>>>> ed4792831fc3caf047a1e83e46ea16079e8f17be:socketzerbitzari/src/main/java/dambi/zerbitzaria/Zerbitzari.java
 }
