@@ -1,3 +1,4 @@
+package dambi;
 
 import java.io.*;
 import java.net.*;
@@ -8,8 +9,8 @@ import java.util.logging.Logger;
 
 public class HariaServer extends Thread {
 
-    private static ObjectInputStream fSarrera;
-    private static Socket socket = null;
+    ObjectInputStream fSarrera;
+    Socket socket = null;
     private static PostgresConnection postgresConnection;
 
     public HariaServer(Socket s, ObjectInputStream ois) throws IOException {
@@ -26,13 +27,14 @@ public class HariaServer extends Thread {
         }
     }
 
-    @SuppressWarnings("unchecked")
-    private static void insertData() {
+   // @SuppressWarnings("unchecked")
+    private void insertData() {
         String langilea;
         Float puntuazioa;
         Date data;
         try {
             postgresConnection = new PostgresConnection();
+            
             List<Partida> partidaZerrenda = (List<Partida>) fSarrera.readObject();
 
             for (Partida partida : partidaZerrenda) {

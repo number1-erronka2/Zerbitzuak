@@ -1,3 +1,4 @@
+package dambi;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,8 +29,7 @@ public class PostgresConnection {
 
     public void insertPartida(String langilea, Float puntuazioa, Date data) throws ClassNotFoundException {
         
-        //String sql = "INSERT INTO partida (puntuazioa, erabiltzailea, data) select ?,?,? where not exists (SELECT erabiltzailea  FROM partida WHERE data=?);";
-        String sql = "INSERT INTO partida (puntuazioa, erabiltzailea, data) VALUES (?,?,?)";
+         String sql = "INSERT INTO partida (puntuazioa, erabiltzailea, data) VALUES (?,?,?)";
         java.sql.Timestamp timestamp = new java.sql.Timestamp(data.getTime());
         try {
             Connection conn = this.connect();
